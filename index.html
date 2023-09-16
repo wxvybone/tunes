@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - MU$IC MAYHEM</title>
+  <title>CodePen - MU$IC MAYHEM new</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -75,20 +75,20 @@
                     <h3><a href="https://music.apple.com/us/playlist/improve/pl.u-PDb4085ueR8aWyN">"WORKOUT PLAYLI$T"</a></h3>
                 </li>
                 <li>
-                  <!DOCTYPE html>
+                 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Redirect</title>
+    <title>Random Redirect Without Duplicates</title>
 </head>
 <body>
-  <h3><a id="randomRedirectLink" href="#">$URPRI$E ME</a></h3>
+  <h3><a id="randomRedirectLink" href="#">$URPRISE ME</a></h3>
 
     <script>
         // Array of preselected URLs
         const links = [
-            "https://youtu.be/7wjgDfWbAT8?si=rgtjhq4salcfO7jw",
+           "https://youtu.be/7wjgDfWbAT8?si=rgtjhq4salcfO7jw",
             "https://youtu.be/KJViHi-dSxY?si=Zh-cmStJVFzc1a9T",
             "https://youtu.be/r4l9bFqgMaQ?si=tCBjhsRNKO1i23lM",
             "https://youtu.be/76XglsQgqxM?si=aA0ocdgF_U_z39WW",
@@ -162,13 +162,26 @@
             // Add more URLs as needed
         ];
 
+        // Variable to store the previously selected URL
+        let previousURL = null;
+
+        // Function to generate a random index that is not the same as the previous one
+        function getRandomIndexWithoutDuplicate() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * links.length);
+            } while (randomIndex === previousURL);
+            previousURL = randomIndex;
+            return randomIndex;
+        }
+
         // Function to redirect to a random link in a new tab
         function redirectToRandomLink(event) {
             // Prevent the default behavior of the anchor element (preventing it from navigating)
             event.preventDefault();
 
-            // Get a random index within the range of the links array
-            const randomIndex = Math.floor(Math.random() * links.length);
+            // Get a random index that is not the same as the previous one
+            const randomIndex = getRandomIndexWithoutDuplicate();
 
             // Get the random URL based on the random index
             const randomURL = links[randomIndex];
@@ -182,44 +195,10 @@
     </script>
 </body>
 </html>
-
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-                </li>
+         </li>
             </ul>
             <p>*All Playlists Are Via Apple Music*</p>
             <h4><a href="https://wxvybone.github.io/WAVYSWORLD/">"Back To Main Page"</a></h4>
-        </div>
-    </div>
-
-    <script>
-        function redirectToRandomVideo() {
-            // Array of preselected YouTube video URLs
-            const videoUrls = [
-               
-
-                // Add more video URLs as needed
-            ];
-
-            // Generate a random index
-            const randomIndex = Math.floor(Math.random() * videoUrls.length);
-
-            // Get the random video URL
-            const randomVideoUrl = videoUrls[randomIndex];
-
-            // Redirect the user to the random video URL
-            window.location.href = randomVideoUrl;
-        }
     </script>
 </body>
 
