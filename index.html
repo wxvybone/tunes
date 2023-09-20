@@ -220,16 +220,6 @@
             window.open(randomURL, '_blank');
         }
 
-        // Add a click event listener to the anchor link
-        document.getElementById("randomRedirectLink").addEventListener("click", redirectToRandomLink);
-    </script>
-       <script>
-        document.getElementById('randomRedirectLink').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default behavior of the link
-            var newTab = window.open(this.getAttribute('href'), '_blank');
-            newTab.blur(); // Move the focus away from the new tab, keeping the current tab active
-            window.focus(); // Return focus to the current tab
-        });
     </script>
 </body>
 </html>
